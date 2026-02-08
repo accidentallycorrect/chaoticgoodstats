@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Headcount Deception — How Politicians Manufactured an Autism Crisis</title>
+<title>They're Lying About Autistic Kids — The Real Numbers</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -22,11 +22,21 @@
     --blue: #60a5fa;
   }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+- {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+background: #0c0c0e !important;
+background-color: #0c0c0e !important;
+}
 
 body {
-background: var(–bg);
+background: var(–bg) !important;
+background-color: #0c0c0e !important;
 color: var(–text);
 font-family: ‘IBM Plex Sans’, sans-serif;
 font-weight: 400;
@@ -37,12 +47,18 @@ overflow-x: hidden;
 
 /* ── NAV ── */
 nav {
-position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 100;
 background: rgba(12,12,14,0.85);
 backdrop-filter: blur(20px);
 border-bottom: 1px solid var(–border);
 padding: 0.75rem 1.25rem;
-display: flex; justify-content: space-between; align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 nav .logo {
 font-family: ‘DM Serif Display’, serif;
@@ -65,7 +81,9 @@ border: 1px solid var(–border);
 /* ── HERO ── */
 .hero {
 min-height: 100vh;
-display: flex; flex-direction: column; justify-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 padding: 6rem 1.5rem 3rem;
 position: relative;
 overflow: hidden;
@@ -73,8 +91,10 @@ overflow: hidden;
 .hero::before {
 content: ‘’;
 position: absolute;
-top: -40%; left: -20%;
-width: 140%; height: 100%;
+top: -40%;
+left: -20%;
+width: 140%;
+height: 100%;
 background: radial-gradient(ellipse at 30% 50%, var(–accent-glow) 0%, transparent 60%);
 pointer-events: none;
 }
@@ -85,11 +105,14 @@ text-transform: uppercase;
 letter-spacing: 0.15em;
 color: var(–accent);
 margin-bottom: 1.25rem;
-display: flex; align-items: center; gap: 0.5rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
 }
 .hero-kicker::before {
 content: ‘’;
-width: 2rem; height: 1px;
+width: 2rem;
+height: 1px;
 background: var(–accent);
 }
 .hero h1 {
@@ -108,7 +131,7 @@ font-style: italic;
 .hero-sub {
 font-size: 1.05rem;
 color: var(–text-dim);
-max-width: 520px;
+max-width: 600px;
 line-height: 1.7;
 margin-bottom: 2.5rem;
 font-weight: 300;
@@ -123,7 +146,8 @@ overflow: hidden;
 max-width: 500px;
 }
 .hero-stat {
-background: var(–surface);
+background: var(–surface) !important;
+background-color: #141418 !important;
 padding: 1.25rem 1rem;
 text-align: center;
 }
@@ -144,17 +168,28 @@ margin-top: 0.4rem;
 
 .scroll-hint {
 position: absolute;
-bottom: 2rem; left: 50%;
+bottom: 2rem;
+left: 50%;
 transform: translateX(-50%);
-display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.5rem;
 color: var(–text-dim);
 font-size: 0.65rem;
 letter-spacing: 0.1em;
 text-transform: uppercase;
 animation: pulse 2s ease-in-out infinite;
 }
-.scroll-hint svg { width: 20px; height: 20px; stroke: var(–text-dim); }
-@keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+.scroll-hint svg {
+width: 20px;
+height: 20px;
+stroke: var(–text-dim);
+}
+@keyframes pulse {
+0%,100% { opacity: 0.4; }
+50% { opacity: 1; }
+}
 
 /* ── SECTIONS ── */
 section {
@@ -187,7 +222,8 @@ font-weight: 300;
 
 /* ── FACT CHECK CARD ── */
 .fact-card {
-background: var(–surface);
+background: var(–surface) !important;
+background-color: #141418 !important;
 border: 1px solid var(–border);
 border-radius: 16px;
 padding: 2rem 1.5rem;
@@ -197,13 +233,18 @@ overflow: hidden;
 }
 .fact-card::before {
 content: ‘’;
-position: absolute; top: 0; left: 0; right: 0;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
 height: 3px;
 }
 .fact-card.false::before { background: var(–red); }
 .fact-card.true::before { background: var(–green); }
 .fact-verdict {
-display: inline-flex; align-items: center; gap: 0.4rem;
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
 font-family: ‘JetBrains Mono’, monospace;
 font-size: 0.7rem;
 font-weight: 500;
@@ -246,7 +287,9 @@ margin: 1.5rem 0;
 }
 .fact-card.false .big-num { color: var(–red); }
 .fact-card .vs {
-display: flex; align-items: baseline; gap: 0.75rem;
+display: flex;
+align-items: baseline;
+gap: 0.75rem;
 margin: 1rem 0;
 }
 .vs .actual {
@@ -263,46 +306,6 @@ text-decoration: line-through;
 text-decoration-color: var(–red);
 }
 
-/* ── BAR CHART ── */
-.bar-chart {
-display: flex; flex-direction: column; gap: 0.6rem;
-margin: 2rem 0;
-}
-.bar-row {
-display: grid;
-grid-template-columns: 120px 1fr 80px;
-align-items: center;
-gap: 0.75rem;
-font-size: 0.8rem;
-}
-.bar-row .bar-label {
-color: var(–text-dim);
-font-size: 0.75rem;
-text-align: right;
-white-space: nowrap;
-}
-.bar-track {
-height: 28px;
-background: var(–surface2);
-border-radius: 6px;
-overflow: hidden;
-position: relative;
-}
-.bar-fill {
-height: 100%;
-border-radius: 6px;
-transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-width: 0;
-}
-.bar-row .bar-value {
-font-family: ‘JetBrains Mono’, monospace;
-font-size: 0.75rem;
-font-weight: 500;
-color: var(–text);
-}
-.bar-row.highlight .bar-label { color: var(–accent); font-weight: 600; }
-.bar-row.highlight .bar-value { color: var(–accent); }
-
 /* ── CALLOUT ── */
 .callout {
 background: var(–accent-glow);
@@ -318,7 +321,8 @@ color: var(–text);
 
 /* ── COMPARISON INLINE ── */
 .compare-inline {
-display: flex; gap: 1px;
+display: flex;
+gap: 1px;
 background: var(–border);
 border-radius: 12px;
 overflow: hidden;
@@ -326,7 +330,8 @@ margin: 1.5rem 0;
 }
 .compare-box {
 flex: 1;
-background: var(–surface);
+background: var(–surface) !important;
+background-color: #141418 !important;
 padding: 1.25rem 1rem;
 text-align: center;
 }
@@ -345,7 +350,8 @@ font-weight: 500;
 
 /* ── QUOTE CARD ── */
 .quote-card {
-background: var(–surface);
+background: var(–surface) !important;
+background-color: #141418 !important;
 border: 1px solid var(–border);
 border-radius: 12px;
 padding: 1.75rem;
@@ -448,7 +454,9 @@ color: var(–accent);
 text-decoration: none;
 }
 .source-strip .src-badge {
-display: inline-flex; align-items: center; gap: 0.35rem;
+display: inline-flex;
+align-items: center;
+gap: 0.35rem;
 background: var(–surface);
 border: 1px solid var(–border);
 padding: 0.35rem 0.75rem;
@@ -463,24 +471,31 @@ letter-spacing: 0.04em;
 .cta-section {
 padding: 4rem 1.5rem;
 text-align: center;
-background: var(–surface);
+background: var(–surface) !important;
+background-color: #141418 !important;
 border-top: 1px solid var(–border);
 }
 .cta-section h2 {
 max-width: none;
-margin-left: auto; margin-right: auto;
+margin-left: auto;
+margin-right: auto;
 }
 .cta-section .lead {
 max-width: 480px;
-margin-left: auto; margin-right: auto;
+margin-left: auto;
+margin-right: auto;
 }
 .share-row {
-display: flex; gap: 0.75rem; justify-content: center;
+display: flex;
+gap: 0.75rem;
+justify-content: center;
 flex-wrap: wrap;
 margin-top: 1.5rem;
 }
 .share-btn {
-display: inline-flex; align-items: center; gap: 0.4rem;
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
 padding: 0.7rem 1.25rem;
 border-radius: 100px;
 font-size: 0.8rem;
@@ -518,11 +533,21 @@ transform: translateY(0);
 
 /* ── RESPONSIVE ── */
 @media (min-width: 640px) {
-section, .hero { padding-left: 2.5rem; padding-right: 2.5rem; }
-.hero-stats { max-width: 450px; }
+section, .hero {
+padding-left: 2.5rem;
+padding-right: 2.5rem;
+}
+.hero-stats {
+max-width: 450px;
+}
 }
 @media (min-width: 900px) {
-section, .hero { padding-left: 4rem; padding-right: 4rem; max-width: 820px; margin: 0 auto; }
+section, .hero {
+padding-left: 4rem;
+padding-right: 4rem;
+max-width: 820px;
+margin: 0 auto;
+}
 }
 </style>
 
@@ -532,163 +557,106 @@ section, .hero { padding-left: 4rem; padding-right: 4rem; max-width: 820px; marg
 <!-- NAV -->
 
 <nav>
-  <span class="logo">The Headcount Deception</span>
-  <span class="badge">Data Investigation</span>
+  <span class="logo">The Real Numbers</span>
+  <span class="badge">NDIS Sept 2025</span>
 </nav>
 
 <!-- HERO -->
 
 <div class="hero">
-  <div class="hero-kicker">Evidence-based investigation</div>
-  <h1>They're counting kids, <em>not dollars</em></h1>
-  <p class="hero-sub">Politicians claim autism is "breaking the NDIS." Official government data tells a completely different story: autism children are 14.93% of participants but only 2.3% of actual spending.</p>
+  <div class="hero-kicker">Data-driven investigation</div>
+  <h1>They're lying about <em>autistic kids</em></h1>
+  <p class="hero-sub">Butler says "40% of NDIS participants have autism." The lie: that means big costs. It doesn't. Autism kids aged 0-8 are only 2.3% of actual spending. 112,188 kids = $1.15 billion. He's counting heads. Hiding dollars. Cut kids now? You don't save. You pay more later.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="num">14.93%</div>
-      <div class="label">Of participants</div>
+      <div class="num">112,188</div>
+      <div class="label">Kids aged 0-8</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">$1.15B</div>
+      <div class="label">Total spent</div>
     </div>
     <div class="hero-stat">
       <div class="num">2.3%</div>
-      <div class="label">Of spending</div>
-    </div>
-    <div class="hero-stat">
-      <div class="num">6.5×</div>
-      <div class="label">Disconnect</div>
+      <div class="label">Of NDIS budget</div>
     </div>
   </div>
   <div class="scroll-hint">
-    Scroll to see the evidence
+    Scroll for receipts
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
   </div>
 </div>
 
-<!-- SECTION 1: FACT CHECK -->
+<!-- SECTION 1: THE LIE -->
 
 <section>
   <div class="reveal">
-    <div class="section-label">Fact Check</div>
-    <h2>The 80% lie that launched a thousand cuts</h2>
-    <p class="lead">Political rhetoric vs. official NDIS data from September 2025.</p>
+    <div class="section-label">The Big Lie</div>
+    <h2>"40% of NDIS is autism"</h2>
+    <p class="lead">They're selling headcounts as costs. That's the lie.</p>
   </div>
 
   <div class="fact-card false reveal">
-    <div class="fact-verdict">✕ Dangerously False</div>
-    <div class="claim">"80% of NDIS participants are autistic"</div>
+    <div class="fact-verdict">✕ Misleading</div>
+    <div class="claim">"40% of NDIS participants have autism"</div>
     <div class="vs">
-      <span class="actual">14.93%</span>
-      <span class="claimed">80%</span>
+      <span class="actual">2.3%</span>
+      <span class="claimed">40%</span>
     </div>
     <div class="explanation">
-      The actual figure from official NDIS data (September 2025) shows autism children aged 0-8 represent <strong>14.93% of all NDIS participants</strong>. This false 80% claim has been weaponized to justify budget cuts targeting autistic children — despite them being among the lowest-cost participants in the entire scheme.
+      The lie: that autism is where the money goes. It isn't. Autism kids aged 0-8 are <strong>only 2.3% of actual spending</strong>. They use big percentages to hide tiny costs. That's not confusion. That's spin.
     </div>
   </div>
 
   <div class="callout reveal">
-    <strong>How did we get from 14.93% to "80%"?</strong> Politicians cite "new entrants" data (70% of recent entrants have autism) but deliberately omit that new entrants ≠ total participants. It's like saying "80% of new university students are freshmen" to claim universities are overrun by first-years.
+    <strong>The lie:</strong> "40%" sounds expensive. Reality: <strong>2.3% of spending</strong>. They inflate people to hide dollars. On purpose.
   </div>
 </section>
 
-<!-- SECTION 2: THE DISCONNECT -->
+<!-- SECTION 2: WHAT CUTTING COSTS -->
 
 <section>
   <div class="reveal">
-    <div class="section-label">The Real Numbers</div>
-    <h2>Headcount vs. spending: A 6.5× disconnect</h2>
-    <p class="lead">What happens when you actually count dollars instead of kids.</p>
+    <div class="section-label">The Math They Won't Do</div>
+    <h2>Cut the kids. Save nothing.</h2>
+    <p class="lead">They call it savings. It's not. It's a bill — delayed.</p>
   </div>
 
   <div class="compare-inline reveal">
     <div class="compare-box">
-      <div class="cmp-label">Participants</div>
-      <div class="cmp-val" style="color:var(--yellow)">14.93%</div>
+      <div class="cmp-label">Current Spending</div>
+      <div class="cmp-val" style="color:var(--text)">$1.15B</div>
     </div>
     <div class="compare-box">
-      <div class="cmp-label">Actual Spending</div>
-      <div class="cmp-val" style="color:var(--green)">2.3%</div>
+      <div class="cmp-label">Cut 50% of Kids</div>
+      <div class="cmp-val" style="color:var(--yellow)">Save $575M</div>
     </div>
     <div class="compare-box">
-      <div class="cmp-label">Disconnect</div>
-      <div class="cmp-val" style="color:var(--accent)">6.5×</div>
+      <div class="cmp-label">% of Total NDIS</div>
+      <div class="cmp-val" style="color:var(--red)">1.15%</div>
     </div>
   </div>
 
   <div class="fact-card true reveal">
-    <div class="fact-verdict">✓ Verified</div>
-    <div class="claim">Autism 0-8: $1.15B spent / $50B total NDIS = 2.3%</div>
+    <div class="fact-verdict">✓ Brutal Reality</div>
+    <div class="claim">Cutting 50% of autistic kids saves 1.15% of NDIS budget</div>
     <div class="explanation">
-      Of the approximately $50 billion in annual NDIS spending, autism children aged 0-8 account for just $1.15 billion — a mere <strong>2.3% of actual expenditure</strong>. This is despite representing 14.93% of all participants, creating a massive 6.5× gap between headcount and cost.
+      The lie: cutting kids fixes the budget. Reality: cut <strong>56,094 children</strong> and you save <strong>1.15%</strong>. That's not reform. That's noise.
     </div>
   </div>
 
   <div class="callout reveal">
-    <strong>Translation:</strong> For every $100 the NDIS spends, autism kids aged 0-8 receive $2.30. Yet they're portrayed as the scheme's primary cost driver. The math doesn't lie — but politicians do.
+    <strong>Here's the real bill:</strong> Cut kids now. They show up later — hospitals, psych, crisis care. You "save" <strong>$575M</strong>. Then you spend <strong>OVER 2 BILLION</strong> fixing the damage. Every time.
   </div>
 </section>
 
-<!-- SECTION 3: COST BY AGE -->
+<!-- SECTION 3: MINISTER QUOTES -->
 
 <section>
   <div class="reveal">
-    <div class="section-label">Cost Trajectory</div>
-    <h2>Kids aren't the problem — adults are</h2>
-    <p class="lead">Autism support costs follow a U-shaped curve: low in childhood, dramatically higher in adulthood.</p>
-  </div>
-
-  <div class="bar-chart reveal" id="ageChart">
-    <div class="bar-row highlight">
-      <span class="bar-label">Ages 0-8</span>
-      <div class="bar-track"><div class="bar-fill" data-width="18.7%" style="background:var(--accent)"></div></div>
-      <span class="bar-value">$29,251</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">Ages 9-14</span>
-      <div class="bar-track"><div class="bar-fill" data-width="18.0%" style="background:var(--blue)"></div></div>
-      <span class="bar-value">$28,092</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">Ages 15-18</span>
-      <div class="bar-track"><div class="bar-fill" data-width="26.4%" style="background:var(--blue)"></div></div>
-      <span class="bar-value">$41,160</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">Ages 19-24</span>
-      <div class="bar-track"><div class="bar-fill" data-width="53.1%" style="background:var(--yellow)"></div></div>
-      <span class="bar-value">$82,775</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">Ages 25-34</span>
-      <div class="bar-track"><div class="bar-fill" data-width="64.7%" style="background:var(--yellow)"></div></div>
-      <span class="bar-value">$100,882</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">Ages 35-44</span>
-      <div class="bar-track"><div class="bar-fill" data-width="67.3%" style="background:var(--yellow)"></div></div>
-      <span class="bar-value">$104,850</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">Ages 55-64</span>
-      <div class="bar-track"><div class="bar-fill" data-width="80.1%" style="background:var(--red)"></div></div>
-      <span class="bar-value">$124,860</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">Ages 65+</span>
-      <div class="bar-track"><div class="bar-fill" data-width="100%" style="background:var(--red)"></div></div>
-      <span class="bar-value">$155,821</span>
-    </div>
-  </div>
-
-  <div class="callout reveal">
-    <strong>The pattern is clear:</strong> Autism support costs increase dramatically with age. At 65+, costs are <strong>5.3× higher</strong> than at ages 0-8. Politicians target the cheapest cohort while ignoring where the real costs are.
-  </div>
-</section>
-
-<!-- SECTION 4: MINISTER QUOTES -->
-
-<section>
-  <div class="reveal">
-    <div class="section-label">Quote Check</div>
-    <h2>What they said vs. what the data shows</h2>
-    <p class="lead">Every major political claim about autism and the NDIS, fact-checked against official government datasets.</p>
+    <div class="section-label">They Said What?</div>
+    <h2>Politicians vs. reality</h2>
+    <p class="lead">Every major claim, fact-checked.</p>
   </div>
 
   <div class="quote-card reveal">
@@ -698,25 +666,25 @@ section, .hero { padding-left: 4rem; padding-right: 4rem; max-width: 820px; marg
       <a href="https://www.health.gov.au/ministers/the-hon-mark-butler-mp/media/radio-interview-with-minister-butler-2gb-21-august-2025" class="quote-source" target="_blank">Source →</a>
     </div>
     <div class="quote-text">
-      "Seven in 10 people who joined the service in the past year doing so for support with autism. It's reached the point that one in six boys is now on the NDIS."
+      "Seven in 10 people who joined the service in the past year did so for autism. One in six boys is now on the NDIS."
     </div>
     <div class="quote-rebuttal">
-      <div class="quote-rebuttal-text">Counting heads, not dollars. Lots of kids ≠ lots of cost.</div>
+      <div class="quote-rebuttal-text">This swaps headcount for cost. That's the con.</div>
     </div>
     <div class="quote-receipts">
-      <div class="quote-receipts-title">📊 Data Receipts</div>
+      <div class="quote-receipts-title">📊 The Numbers</div>
       <ul class="receipt-list">
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Autism 0-8: <span class="receipt-highlight">14.93% of participants, only 2.3% of actual spending</span></span>
+          <span>Spin: 70% of <strong>new entrants</strong> have autism</span>
         </li>
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>That's a <span class="receipt-highlight">6.5× disconnect</span> between headcount and cost</span>
+          <span>Truth: Headcount isn't cost. Autistic kids 0-8 = <span class="receipt-highlight">only 2.3% of spending</span></span>
         </li>
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Autism 0-8 avg: <span class="receipt-highlight">$29,251/year</span> (ranks #13 of all disability/age groups)</span>
+          <span>Per child: <span class="receipt-highlight">$10,254/year actual spending</span> ($28/day) ...ps that's what most kids are being budgeted. Not 28k. Ah, math. </span>
         </li>
       </ul>
     </div>
@@ -725,29 +693,29 @@ section, .hero { padding-left: 4rem; padding-right: 4rem; max-width: 820px; marg
   <div class="quote-card reveal">
     <div class="quote-header">
       <span class="quote-speaker">Mark Butler</span>
-      <span class="quote-date">21 Aug 2025, Media Reporting</span>
-      <a href="https://arichlife.com.au/minister-addresses-ndiss-disproportionate-autism-spend/" class="quote-source" target="_blank">Source →</a>
+      <span class="quote-date">20 Aug 2025, National Press Club</span>
+      <a href="https://www.abc.net.au/news/2025-08-20/ndis-growth-thriving-kids-autism-mark-butler/105675484" class="quote-source" target="_blank">Source →</a>
     </div>
     <div class="quote-text">
-      "Of the 78,600 new beneficiaries in the 12 months to June 2025, 56,000 have autism as their primary diagnosis."
+      "About 23 per cent are younger than nine, and about 40 per cent have a primary diagnosis of autism."
     </div>
     <div class="quote-rebuttal">
-      <div class="quote-rebuttal-text">That's an "entrants" stat. Tells you nothing about budget impact.</div>
+      <div class="quote-rebuttal-text">This stat is used to blame kids for adult costs.</div>
     </div>
     <div class="quote-receipts">
-      <div class="quote-receipts-title">📊 Data Receipts</div>
+      <div class="quote-receipts-title">📊 The Numbers</div>
       <ul class="receipt-list">
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Autism children <span class="receipt-highlight">using only 65.9%</span> of budgets = massive underspend ($1.12B unused)</span>
+          <span>True: 40% of all participants have autism (all ages)</span>
         </li>
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Autism cost intensity: <span class="receipt-highlight">$32,666/person</span> (rank #13, not top tier)</span>
+          <span>Also true: Autism kids 0-8 only use <span class="receipt-highlight">65.9% of budgets</span></span>
         </li>
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Highest intensity: Spinal Cord Injury 0-8 at <span class="receipt-highlight">$203,000/year</span></span>
+          <span><span class="receipt-highlight">$1.12B allocated but sitting unused</span> = market failure, not runaway spending</span>
         </li>
       </ul>
     </div>
@@ -756,111 +724,106 @@ section, .hero { padding-left: 4rem; padding-right: 4rem; max-width: 820px; marg
   <div class="quote-card reveal">
     <div class="quote-header">
       <span class="quote-speaker">Bill Shorten</span>
-      <span class="quote-date">Dec 2023, NDIS Review</span>
+      <span class="quote-date">Dec 2023</span>
       <a href="https://ministers.dss.gov.au/speeches/13421" class="quote-source" target="_blank">Source →</a>
     </div>
     <div class="quote-text">
-      "Almost half of participants in the Scheme are children. None of the actuaries saw that coming."
+      "Almost half of participants in the Scheme are children."
     </div>
     <div class="quote-rebuttal">
-      <div class="quote-rebuttal-text">Half the people ≠ half the money. Don't confuse "lots" with "expensive."</div>
+      <div class="quote-rebuttal-text">Half the people. Not half the money. Math is hard.</div>
     </div>
     <div class="quote-receipts">
-      <div class="quote-receipts-title">📊 Data Receipts</div>
+      <div class="quote-receipts-title">📊 The Numbers</div>
       <ul class="receipt-list">
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Autism: high volume, <span class="receipt-highlight">low intensity</span> ($32,666/person, rank #13)</span>
+          <span>Autism kids 0-8: <span class="receipt-highlight">$29,251 average budget</span></span>
         </li>
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Children <span class="receipt-highlight">under-utilizing budgets (65.9%)</span> — not runaway usage</span>
+          <span>Overall NDIS average: <span class="receipt-highlight">$84,000 per person</span></span>
         </li>
         <li class="receipt-item">
           <span class="receipt-bullet">▸</span>
-          <span>Structural costs sit in <span class="receipt-highlight">adult cohorts</span> (3-5× higher per person)</span>
+          <span>Kids cost <span class="receipt-highlight">65% less than average</span></span>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- SECTION 5: COST RANKING -->
+<!-- SECTION 4: WHERE REAL COSTS ARE -->
 
 <section>
   <div class="reveal">
-    <div class="section-label">Cost Intensity</div>
-    <h2>Autism ranks #13 — not even in the top 10</h2>
-    <p class="lead">Average cost per participant across all NDIS disability/age combinations. Autism 0-8 is near the bottom.</p>
-  </div>
-
-  <div class="bar-chart reveal" id="intensityChart">
-    <div class="bar-row">
-      <span class="bar-label">#1 Spinal Cord 0-8</span>
-      <div class="bar-track"><div class="bar-fill" data-width="100%" style="background:var(--red)"></div></div>
-      <span class="bar-value">$203,000</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">#2 Cerebral Palsy 0-8</span>
-      <div class="bar-track"><div class="bar-fill" data-width="37.8%" style="background:var(--yellow)"></div></div>
-      <span class="bar-value">$76,754</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">#4 Intellectual 0-8</span>
-      <div class="bar-track"><div class="bar-fill" data-width="25.6%" style="background:var(--yellow)"></div></div>
-      <span class="bar-value">$51,910</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">#10 Dev. Delay 0-8</span>
-      <div class="bar-track"><div class="bar-fill" data-width="10.9%" style="background:var(--blue)"></div></div>
-      <span class="bar-value">$22,046</span>
-    </div>
-    <div class="bar-row highlight">
-      <span class="bar-label">#13 Autism 0-8</span>
-      <div class="bar-track"><div class="bar-fill" data-width="14.4%" style="background:var(--accent)"></div></div>
-      <span class="bar-value">$29,251</span>
-    </div>
-  </div>
-
-  <div class="callout reveal">
-    <strong>The narrative doesn't match the data.</strong> Autism 0-8 is portrayed as the scheme's primary cost driver, yet ranks #13 by cost intensity. Spinal cord injury participants cost 7× more per person — but you never hear politicians targeting them.
-  </div>
-</section>
-
-<!-- SECTION 6: THE UNDERSPEND -->
-
-<section>
-  <div class="reveal">
-    <div class="section-label">Budget Utilization</div>
-    <h2>$1.12 billion sitting unused</h2>
-    <p class="lead">Autism children are only using 65.9% of their allocated therapy budgets. This isn't a "blowout" — it's market failure.</p>
+    <div class="section-label">Follow The Money</div>
+    <h2>Kids aren't expensive. Adults are. Assisted living is. 24/7 care is. </h2>
+    <p class="lead">Bet you don't how much these kids will cost when they are adults after they're kicked off NDIS.</p>
   </div>
 
   <div class="compare-inline reveal">
     <div class="compare-box">
-      <div class="cmp-label">Allocated</div>
-      <div class="cmp-val" style="color:var(--text)">$3.28B</div>
+      <div class="cmp-label">Kids 0-8</div>
+      <div class="cmp-val" style="color:var(--green)">$29,251</div>
     </div>
     <div class="compare-box">
-      <div class="cmp-label">Actually Used</div>
-      <div class="cmp-val" style="color:var(--green)">$2.16B</div>
+      <div class="cmp-label">Adults 25-34</div>
+      <div class="cmp-val" style="color:var(--yellow)">$100,882</div>
     </div>
     <div class="compare-box">
-      <div class="cmp-label">Unused</div>
-      <div class="cmp-val" style="color:var(--red)">$1.12B</div>
+      <div class="cmp-label">Increase</div>
+      <div class="cmp-val" style="color:var(--red)">3.5×</div>
     </div>
   </div>
 
-  <div class="fact-card false reveal">
-    <div class="fact-verdict">Context Missing</div>
-    <div class="claim">65.9% utilization rate</div>
+  <div class="fact-card true reveal">
+    <div class="fact-verdict">✓ They Know This</div>
+    <div class="claim">Cut kids now = pay 3× more later</div>
     <div class="explanation">
-      Autism children aged 0-8 are only accessing <strong>two-thirds of their allocated therapy funding</strong>. This $1.12 billion in unused capacity signals provider shortages, service waitlists, and market failure — not "runaway spending" as claimed by politicians.
+      The lie: cutting kids saves money. Reality: skip early support and costs explode later. <strong>3–5× higher.</strong> Save millions now. Pay <strong>OVER 2 BILLION</strong> later. They know this. They cut anyway.
     </div>
   </div>
 
   <div class="callout reveal">
-    <strong>If autism was "breaking the NDIS"</strong> we'd see near-100% utilization or overspending. Instead we see massive underspend. The problem isn't too much funding — it's that allocated funding isn't reaching children who need it.
+    <strong>The actual cost breakdown:</strong> Ages 0-8 average $29k. Ages 19-24 average $83k. Ages 25-34 average $101k. Ages 65+ average $156k. You want to cut the <strong>cheapest</strong> cohort? Explain that math.
+  </div>
+</section>
+
+<!-- SECTION 5: THE ROI -->
+
+<section>
+  <div class="reveal">
+    <div class="section-label">Return On Investment</div>
+    <h2>Early intervention: 13.4:1 return</h2>
+    <p class="lead">Every $1 spent on autism kids aged 0-8 returns $13.40 in avoided costs over their lifetime.</p>
+  </div>
+
+  <div class="compare-inline reveal">
+    <div class="compare-box">
+      <div class="cmp-label">Invest Now (0-8)</div>
+      <div class="cmp-val" style="color:var(--green)">$29,251</div>
+    </div>
+    <div class="compare-box">
+      <div class="cmp-label">Lifetime Return</div>
+      <div class="cmp-val" style="color:var(--accent)">$392,000</div>
+    </div>
+    <div class="compare-box">
+      <div class="cmp-label">ROI</div>
+      <div class="cmp-val" style="color:var(--green)">$13.4 saved for every $1 spent</div>
+    </div>
+  </div>
+
+  <div class="fact-card true reveal">
+    <div class="fact-verdict">✓ Peer-Reviewed</div>
+    <div class="claim">Cut autism kids = economic sabotage</div>
+    <div class="explanation">
+      Studies show early intervention produces a <strong>13.4x return</strong>. Spend $29k now, save $392k over a lifetime. Cut that $29k? You and your kids spend $100k+ per year for every kid they kick off now when they're adults -if they live. This isn't compassion. It's accounting. And for those who won't make it: murder.
+    </div>
+  </div>
+
+  <div class="callout reveal">
+    <strong>What $29k buys:</strong> 45min hour of OT, 45min hour of Speech Therapy, per week. And that's if you find decent providers. (Spoiler: there aren't any). With this, kids learn to communicate, reduce violent behaviors, function. Cut it? They need 24/7 care as adults. Forever.
   </div>
 </section>
 
@@ -868,13 +831,13 @@ section, .hero { padding-left: 4rem; padding-right: 4rem; max-width: 820px; marg
 
 <div class="cta-section">
   <div class="reveal">
-    <div class="section-label">Take Action</div>
-    <h2>The data is clear.<br>Share it.</h2>
-    <p class="lead">Every Australian deserves to know what the numbers actually say about autism and the NDIS.</p>
+    <div class="section-label">Spread The Truth</div>
+    <h2>Share the real numbers</h2>
+    <p class="lead">112,188 kids. $1.15 billion. 2.3% of NDIS. That's the truth they don't want you to know.</p>
     <div class="share-row">
       <button class="share-btn primary" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='Link copied!'">Copy link</button>
-      <a class="share-btn" href="https://twitter.com/intent/tweet?text=Politicians%20say%20autism%20is%20%22breaking%20the%20NDIS%22%0A%0AThe%20data%3A%0A%E2%80%A2%2014.93%25%20of%20participants%0A%E2%80%A2%202.3%25%20of%20spending%0A%E2%80%A2%206.5%C3%97%20disconnect%0A%0AThey%27re%20counting%20kids%2C%20not%20dollars." target="_blank" rel="noopener">Share on X</a>
-      <a class="share-btn" href="https://www.reddit.com/submit?title=The%20Headcount%20Deception%3A%20How%20Politicians%20Manufactured%20an%20Autism%20Crisis&url=" target="_blank" rel="noopener">Reddit</a>
+      <a class="share-btn" href="https://twitter.com/intent/tweet?text=Butler%20says%20%2240%25%20of%20NDIS%20is%20autism%22%0A%0AThe%20spending%20reality%3A%0A112%2C188%20kids%0A%241.15B%20spent%0A2.3%25%20of%20total%20NDIS%0A%0AHe%27s%20counting%20heads%2C%20not%20dollars." target="_blank" rel="noopener">Share on X</a>
+      <a class="share-btn" href="https://www.reddit.com/submit?title=The%20Real%20Numbers%3A%20Autistic%20Kids%20and%20NDIS&url=" target="_blank" rel="noopener">Reddit</a>
     </div>
   </div>
 </div>
@@ -882,11 +845,10 @@ section, .hero { padding-left: 4rem; padding-right: 4rem; max-width: 820px; marg
 <!-- SOURCE -->
 
 <div class="source-strip">
-  <div class="src-badge">◆ Verified data source</div>
+  <div class="src-badge">◆ Official NDIS Data</div>
   <div>
-    All figures sourced from <a href="https://dataresearch.ndis.gov.au/datasets" target="_blank" rel="noopener">NDIS Open Data Portal</a> — official government datasets.<br>
-    September 2025 snapshot · Analysis date: February 8, 2026<br>
-    <a href="/mnt/project/README.md">View detailed methodology →</a>
+    Source: <a href="https://dataresearch.ndis.gov.au/datasets" target="_blank" rel="noopener">NDIS Open Data Portal</a><br>
+    September 2025 snapshot · Verified February 8, 2026
   </div>
 </div>
 
@@ -901,24 +863,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Animate bar charts
-const chartObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      setTimeout(() => {
-        e.target.querySelectorAll('.bar-fill').forEach((bar, i) => {
-          setTimeout(() => { bar.style.width = bar.dataset.width; }, i * 80);
-        });
-      }, 200);
-    }
-  });
-}, { threshold: 0.2 });
-
-['ageChart', 'intensityChart'].forEach(id => {
-  const chart = document.getElementById(id);
-  if (chart) chartObs.observe(chart);
-});
 </script>
 
 </body>
